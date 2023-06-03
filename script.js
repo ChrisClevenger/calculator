@@ -3,7 +3,34 @@ const operationButtons = document.querySelectorAll('.operand');
 const equalsButton = document.querySelector('#equalsButton'); 
 const clearButton = document.querySelector('#clearButton'); 
 const deleteButton = document.querySelector('#deleteButton'); 
+const previousOperand = document.querySelector('#previousOperand'); 
+const currentOperand = document.querySelector('#currentOperand'); 
 
+class Calculator {
+    constructor (previousOperand, currentOperand)
+    this.previousOperand = previousOperand
+    this.currentOperand = currentOperand
+}
+
+clear() {
+
+}
+
+delete() {
+
+}
+
+chooseOperation(operation) {
+
+}
+
+compute() {
+
+}
+
+updateDisplay() {
+    
+}
 //Array holder for button logs
 
 const i = [];  
