@@ -7,37 +7,47 @@ const previousOperand = document.querySelector('#previousOperand');
 const currentOperand = document.querySelector('#currentOperand'); 
 
 class Calculator {
-    constructor (previousOperand, currentOperand)
-    this.previousOperand = previousOperand
-    this.currentOperand = currentOperand
+    constructor(previousOperand, currentOperand) {
+    this.previousOperand = previousOperand; 
+    this.currentOperand = currentOperand; 
+    this.clear(); 
 }
+
 
 clear() {
-
+    this.currentOperand = ''; 
+    this.previousOperand = ''; 
+    this.operation = undefined; 
 }
 
-delete() {
+//function delete() {
 
+//}; 
+
+appendNumber(number) {
+    this.currentOperand = number; 
 }
 
 chooseOperation(operation) {
 
 }
 
-compute() {
+//compute() {
 
-}
+//}
 
 updateDisplay() {
-    
+    this.currentOperand.innerText = this.currentOperand; 
+
 }
+}; 
 //Array holder for button logs
 
 const i = [];  
 
 // Function to take button presses and convert to string (of integers)
 
-document.addEventListener('DOMContentLoaded', function() {
+/* document.addEventListener('DOMContentLoaded', function() {
     integers.forEach(function(integer) {
       integer.addEventListener('click', function(e) {
         i.push(this.value);
@@ -55,5 +65,14 @@ document.addEventListener('DOMContentLoaded', function() {
     console.log(integerString); 
       });
     });
-  });
+  }); 
+  */
 
+const calculator = new Calculator(previousOperand, currentOperand); 
+
+integers.forEach(button => {
+    button.addEventListener("click", () => {
+        calculator.appendNumber(button.value); 
+        calculator.updateDisplay(); 
+    })
+}); 
