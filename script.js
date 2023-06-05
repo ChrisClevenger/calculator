@@ -47,7 +47,7 @@ class Calculator {
                 break; 
             case '÷': 
                 computation = previous / current; 
-                break; 
+                break;
             default: 
                 return;  
         }

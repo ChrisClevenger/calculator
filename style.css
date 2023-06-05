@@ -27,6 +27,7 @@ main {
 .display {
     background-color: #F4EBD0; 
     height: 100px; 
+    max-width: 280px; 
     color: #122620; 
     border: #D6AD60; 
     margin: 15px; 
