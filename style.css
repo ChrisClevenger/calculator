@@ -82,3 +82,22 @@ button:hover {
     background-color: #122620;
     opacity: .2;
 }
+
+footer, a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    font-size: 20px;
+    text-decoration: none;
+    color: #122620; 
+    font-family: Gotham Rounded, sans-serif; 
+    margin-top: -10px; 
+}
+
+#githubImg {
+    height: 30px; 
+    width: 30px; 
+    margin: 0px 0px 0px 5px; 
+}
+
