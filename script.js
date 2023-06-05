@@ -124,3 +124,41 @@ clearButton.addEventListener('click', () => {
     calculator.delete();
     calculator.updateDisplay();
  });
+
+ window.addEventListener('keydown', handleKeyboardInput); 
+
+ function handleKeyboardInput(e) {
+    if (e.key >= 0 && e.key <= 9) {
+        calculator.appendNumber(e.key);
+        calculator.updateDisplay();
+    }
+    if (e.key === '.') {
+        calculator.appendNumber('.');
+        calculator.updateDisplay();
+    }
+    if (e.key === '=' || e.key === 'Enter') {
+        calculator.compute();
+        calculator.updateDisplay();
+    }
+    if (e.key === 'Backspace') {
+        calculator.delete();
+        calculator.updateDisplay();
+    }
+    if (e.key === 'Escape') {
+        calculator.clear();
+        calculator.updateDisplay();
+    }
+    if (e.key === '+' || e.key === '-' || e.key === '*' || e.key === '/') {
+        const operation = convertOperator(e.key);
+        calculator.chooseOperation(operation);
+        calculator.updateDisplay();
+    }
+}; 
+
+
+function convertOperator(keyboardOperator) {
+    if (keyboardOperator === '/') return '÷';
+    if (keyboardOperator === '*') return '*';
+    if (keyboardOperator === '-') return '-';
+    if (keyboardOperator === '+') return '+';
+}; 
