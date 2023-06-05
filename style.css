@@ -1,18 +1,18 @@
 
 
-body {
+main {
     display: flex; 
     flex-direction: column; 
     justify-content: center; 
     align-items: center;
-    height: 100vh; 
     box-sizing: border-box;
+    height: 100vh; 
+    font-family: Gotham Rounded, sans-serif; 
 }
 
 .calculator {
     background-color: #122620;
     color: #F4EBD0; 
-    margin: auto; 
     display: flex;
     flex-direction: column;
     border: 8px; 
@@ -23,13 +23,27 @@ body {
 
 .display {
     background-color: #F4EBD0; 
-    height: 120px; 
+    height: 100px; 
     color: #122620; 
     border: #D6AD60; 
-    margin: 10px; 
+    margin: 15px; 
     border-style: solid; 
     border-width: 8px; 
     border-radius: 8px; 
+    font-size: 2.5rem; 
+    display: flex; 
+    align-items: flex-end;
+    flex-direction: column;
+    justify-content: space-around;
+    padding-right: 10px; 
+    word-wrap: break-word; 
+    word-break: break-all; 
+}
+
+#previousInput {
+    font-size: 1.5rem; 
+    color: #122620; 
+    opacity: .8; 
 }
 
 #btnContainer {
@@ -42,7 +56,7 @@ body {
     align-content: center;
     justify-content: center;
     grid-template-columns: repeat(4, 80px);
-    grid-template-rows: minmax(96px, auto) repeat(5, 80px); 
+    grid-template-rows: minmax(96px, auto) repeat(4, 80px); 
 }
 
 #clearButton, #deleteButton {
@@ -54,4 +68,13 @@ body {
     background-color: #122620; 
     color: #D6AD60; 
     border: 0px; 
+}
+
+.operand {
+    font-size: 2.5rem; 
+}
+
+button:hover {
+    background-color: #122620;
+    opacity: .2;
 }
