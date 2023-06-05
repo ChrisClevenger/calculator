@@ -18,8 +18,8 @@ header {
     background-color: #122620;
     color: #F4EBD0; 
     margin: auto; 
-    height: 480px; 
-    width: 320px; 
+    display: flex;
+    flex-direction: column;
 }
 
 .display {
@@ -36,11 +36,16 @@ header {
 #btnContainer {
     background-color: #122620;
     color: #D6AD60; 
-    display: flex; 
-    justify-content: space-between; 
+    padding-top: 5px; 
+    padding-left: 10px; 
+    padding-right: 10px; 
+    display: grid; 
+    align-content: center;
+    justify-content: center;
+    grid-template-columns: repeat(4, 80px);
+    grid-template-rows: minmax(80px, auto) repeat(5, 80px); 
 }
 
 #clearButton, #deleteButton {
-    justify-content: space-around;
-    width: 
+    grid-column: span 2; 
 }
