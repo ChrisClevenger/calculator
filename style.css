@@ -1,0 +1,46 @@
+
+
+body {
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center;
+    height: 100vh; 
+    box-sizing: border-box;
+}
+
+header {
+    font-size: 22px; 
+    text-align: center; 
+}
+
+.calculator {
+    background-color: #122620;
+    color: #F4EBD0; 
+    margin: auto; 
+    height: 480px; 
+    width: 320px; 
+}
+
+.display {
+    background-color: #F4EBD0; 
+    height: 80px; 
+    color: #122620; 
+    border: #D6AD60; 
+    margin: 10px; 
+    border-style: solid; 
+    border-width: 5px; 
+    border-radius: 8px; 
+}
+
+#btnContainer {
+    background-color: #122620;
+    color: #D6AD60; 
+    display: flex; 
+    justify-content: space-between; 
+}
+
+#clearButton, #deleteButton {
+    justify-content: space-around;
+    width: 
+}
